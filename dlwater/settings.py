@@ -1,4 +1,5 @@
 from pathlib import Path
+from whitenoise.middleware import WhiteNoiseMiddleware
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -20,6 +21,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -70,3 +72,6 @@ EMAIL_HOST_USER     = os.environ.get('EMAIL_HOST_USER', 'dlwatersolutionsugandal
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', '')
 DEFAULT_FROM_EMAIL  = 'D & L Water Solutions <dlwatersolutionsugandaltd@gmail.com>'
 CONTACT_EMAIL       = 'dlwatersolutionsugandaltd@gmail.com'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
