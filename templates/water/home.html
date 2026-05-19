@@ -1,0 +1,283 @@
+{% extends 'water/base.html' %}
+{% load static %}
+{% block title %}D & L Water Solutions Uganda Limited — Pure Water. Stronger Uganda.{% endblock %}
+
+{% block content %}
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-bg-overlay"></div>
+  <div class="container">
+    <div class="hero-inner">
+      <div class="animate">
+        <span class="hero-eyebrow">🇺🇬 &nbsp; Uganda's UV Water Purification Leaders</span>
+        <h1>PURE WATER.<br><span class="accent">STRONGER UGANDA.</span></h1>
+        <p class="hero-desc">Advanced UV water purification systems for homes, businesses and communities across Uganda — killing germs, saving money, protecting lives.</p>
+        <div class="hero-actions">
+          <a href="{% url 'products' %}" class="btn btn-blue">OUR SOLUTIONS</a>
+          <a href="{% url 'contact' %}" class="btn btn-outline-white">WATCH VIDEO ▶</a>
+        </div>
+        <div class="hero-dots">
+          <div class="hero-dot active"></div>
+          <div class="hero-dot"></div>
+          <div class="hero-dot"></div>
+        </div>
+      </div>
+
+      <!-- Right card — like PureFlow's "Clean Water For a Healthy Tomorrow" -->
+      <div class="hero-card animate delay-2">
+        <div class="hero-card-label">FOR A MISSION</div>
+        <h3>Clean Water For a Healthy Tomorrow</h3>
+        <p>To ensure every person in Uganda has access to clean, safe and affordable water through UV technology.</p>
+        <div class="hero-card-img">
+          <img src="{% static 'images/tank.png' %}" alt="D&L safe drinking water stainless steel tank">
+        </div>
+        <a href="{% url 'about' %}" class="hero-card-link">READ MORE →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TRUST STRIP ===== -->
+<div class="trust-strip">
+  <div class="container">
+    <div class="trust-item">
+      <div class="trust-icon">⚡</div>
+      <div>
+        <h4>Advanced Technology</h4>
+        <p>State-of-the-art UV purification systems designed for maximum efficiency and reliability.</p>
+      </div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">🛡️</div>
+      <div>
+        <h4>Safe &amp; Reliable</h4>
+        <p>Delivering consistent, high-quality water that meets international safety standards.</p>
+      </div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">🌍</div>
+      <div>
+        <h4>Sustainable Solutions</h4>
+        <p>Environmentally responsible systems that preserve resources and support communities.</p>
+      </div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">🤝</div>
+      <div>
+        <h4>Expert Support</h4>
+        <p>From consultation to after-sales service, we're with you every step of the way.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== ABOUT ===== -->
+<section class="section section-white">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text">
+        <span class="section-eyebrow">ABOUT D &amp; L WATER SOLUTIONS</span>
+        <h2>Improving Lives Through Clean Water</h2>
+        <p>D &amp; L Water Solutions Uganda Limited is a Ugandan water purification company committed to providing reliable, affordable and sustainable clean water solutions.</p>
+        <p>We serve households, businesses, institutions and communities with systems that remove impurities, bacteria and contaminants — ensuring safe water for drinking, cooking and daily use.</p>
+        <div class="about-checks">
+          <div class="about-check"><div class="check-mark">✓</div><span>UV purification eliminates 99.9% of all pathogens and viruses</span></div>
+          <div class="about-check"><div class="check-mark">✓</div><span>Low 12W electricity — affordable for homes and businesses</span></div>
+          <div class="about-check"><div class="check-mark">✓</div><span>Stainless steel tanks from 300 L to 1,000 L capacity</span></div>
+          <div class="about-check"><div class="check-mark">✓</div><span>Serving schools, hospitals, hotels, farms and residences</span></div>
+        </div>
+        <div class="about-signature">
+          <div class="about-sig-name">D &amp; L Water Solutions Team</div>
+          <div class="about-sig-title">Managing Director</div>
+        </div>
+        <a href="{% url 'about' %}" class="btn btn-blue" style="margin-top:1.5rem;">READ MORE →</a>
+      </div>
+
+      <div class="about-img-col">
+        <div class="about-main-img">
+          <img src="{% static 'images/filters_installed.png' %}" alt="D&L UV filter system installed at client site">
+        </div>
+        <div class="about-badge">
+          <div class="about-badge-num">10+</div>
+          <div class="about-badge-text">Years of Experience in Water Solutions</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SOLUTIONS GRID ===== -->
+<section class="section section-soft">
+  <div class="container">
+    <div class="section-header center">
+      <span class="section-eyebrow">OUR SOLUTIONS</span>
+      <h2>Water Purification Systems For Every Need</h2>
+      <p>From residential units to industrial plants, our products are designed to deliver purity, performance and peace of mind.</p>
+    </div>
+    <div class="solutions-grid">
+      <div class="solution-card">
+        <div class="solution-img">
+          <img src="{% static 'images/purifier_unit.png' %}" alt="Home UV water purifier system">
+        </div>
+        <div class="solution-body">
+          <div class="solution-tag">Residential</div>
+          <h3>Home Solutions</h3>
+          <p>Compact systems for safe drinking water at home. Easy to install and maintain.</p>
+          <a href="{% url 'products' %}" class="solution-link">Learn More →</a>
+        </div>
+      </div>
+      <div class="solution-card">
+        <div class="solution-img">
+          <img src="{% static 'images/filters_installed.png' %}" alt="Commercial water filter system installed">
+        </div>
+        <div class="solution-body">
+          <div class="solution-tag">Commercial</div>
+          <h3>Commercial Solutions</h3>
+          <p>High-capacity options for hotels, schools and institutions of all sizes.</p>
+          <a href="{% url 'products' %}" class="solution-link">Learn More →</a>
+        </div>
+      </div>
+      <div class="solution-card">
+        <div class="solution-img">
+          <img src="{% static 'images/install.png' %}" alt="Industrial water purification system installation">
+        </div>
+        <div class="solution-body">
+          <div class="solution-tag">Industrial</div>
+          <h3>Industrial Solutions</h3>
+          <p>High-output systems for factories and large-scale operations. Up to 1,800 L/hr.</p>
+          <a href="{% url 'products' %}" class="solution-link">Learn More →</a>
+        </div>
+      </div>
+      <div class="solution-card">
+        <div class="solution-img">
+          <img src="{% static 'images/tank.png' %}" alt="Community water storage tank">
+        </div>
+        <div class="solution-body">
+          <div class="solution-tag">Community</div>
+          <h3>Community Solutions</h3>
+          <p>Large stainless steel reservoir tanks for communities and public water points.</p>
+          <a href="{% url 'products' %}" class="solution-link">Learn More →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STATS STRIP ===== -->
+<div class="stats-strip">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-num">10+</div>
+        <div class="stat-label">Years of Experience</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">500+</div>
+        <div class="stat-label">Projects Completed</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">200K+</div>
+        <div class="stat-label">People Served</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">24/7</div>
+        <div class="stat-label">Support Available</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== GALLERY ===== -->
+<section class="section section-white">
+  <div class="container">
+    <div class="section-header center">
+      <span class="section-eyebrow">OUR WORK</span>
+      <h2>Real Installations Across Uganda</h2>
+      <p>Our certified team installs UV purification systems in homes, schools, hospitals and factories across the country.</p>
+    </div>
+    <div class="gallery-masonry">
+      <div class="gal-card gal-card--tall">
+        <img src="{% static 'images/filters_installed.png' %}" alt="3-stage UV filter system installed on wall" loading="lazy">
+        <div class="gal-overlay"><span>3-Stage UV Filter System — Installed</span></div>
+      </div>
+      <div class="gal-card">
+        <img src="{% static 'images/purifier_unit.png' %}" alt="D&L complete UV purifier unit" loading="lazy">
+        <div class="gal-overlay"><span>Complete UV Purifier Unit</span></div>
+      </div>
+      <div class="gal-card">
+        <img src="{% static 'images/clean_vs_dirty.png' %}" alt="Clean vs dirty filter comparison" loading="lazy">
+        <div class="gal-overlay"><span>Clean vs Dirty — Proof It Works</span></div>
+      </div>
+      <div class="gal-card gal-card--wide">
+        <img src="{% static 'images/tank.png' %}" alt="D&L stainless steel safe drinking water tank" loading="lazy">
+        <div class="gal-overlay"><span>Stainless Steel Storage Tank — 1,000 L</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== VIDEOS ===== -->
+<section class="section section-navy">
+  <div class="container">
+    <div class="section-header center">
+      <span class="section-eyebrow">WATCH US WORK</span>
+      <h2>See the System in Action</h2>
+      <p>Real footage of D &amp; L UV purification systems installed and running at client sites across Uganda.</p>
+    </div>
+    <div class="video-grid">
+      <div class="video-card">
+        <video controls preload="metadata">
+          <source src="{% static 'images/vid1.mp4' %}" type="video/mp4">
+        </video>
+        <div class="video-label"><span class="v-icon">▶</span> Installation Walkthrough</div>
+      </div>
+      <div class="video-card">
+        <video controls preload="metadata">
+          <source src="{% static 'images/vid2.mp4' %}" type="video/mp4">
+        </video>
+        <div class="video-label"><span class="v-icon">▶</span> System in Operation</div>
+      </div>
+      <div class="video-card">
+        <video controls preload="metadata">
+          <source src="{% static 'images/vid3.mp4' %}" type="video/mp4">
+        </video>
+        <div class="video-label"><span class="v-icon">▶</span> Clean Water Flowing</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MARKETS ===== -->
+<section class="section section-soft">
+  <div class="container">
+    <div class="section-header center">
+      <span class="section-eyebrow">SUITABLE FOR</span>
+      <h2>Who We Serve</h2>
+      <p>Our purification systems are built for a wide range of clients and settings across Uganda.</p>
+    </div>
+    <div class="markets-grid">
+      <div class="market-card"><div class="market-icon">🏫</div><h4>Schools</h4><p>Safe water for students and staff every day.</p></div>
+      <div class="market-card"><div class="market-icon">🏥</div><h4>Hospitals</h4><p>Hospital-grade purification for clinical use.</p></div>
+      <div class="market-card"><div class="market-icon">🏭</div><h4>Factories</h4><p>High-volume industrial output up to 1,800 L/hr.</p></div>
+      <div class="market-card"><div class="market-icon">🏡</div><h4>Residential Homes</h4><p>Compact, affordable home purifiers.</p></div>
+      <div class="market-card"><div class="market-icon">🏨</div><h4>Hotels &amp; Lodges</h4><p>Reliable clean water for guests at all times.</p></div>
+      <div class="market-card"><div class="market-icon">🌾</div><h4>Farms</h4><p>Agricultural water treatment solutions.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta-section">
+  <div class="container">
+    <h2>Ready for Safe Drinking Water?</h2>
+    <p>Contact D &amp; L Water Solutions today to get a quote for your home, school, hospital or business.</p>
+    <div class="cta-actions">
+      <a href="{% url 'contact' %}" class="btn btn-white">REQUEST A QUOTE</a>
+      <a href="{% url 'products' %}" class="btn btn-outline-white">VIEW PRODUCTS</a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

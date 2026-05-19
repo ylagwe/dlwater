@@ -1,0 +1,116 @@
+{% extends 'water/base.html' %}
+{% load static %}
+{% block title %}About Us — D & L Water Solutions Uganda{% endblock %}
+{% block content %}
+
+<section class="page-hero" style="background-image:url('{% static "images/technician.png" %}'); background-size:cover; background-position:center top;">
+  <div class="container">
+    <div class="breadcrumb"><a href="{% url 'home' %}">Home</a> <span>›</span> <span>About Us</span></div>
+    <h1>About D &amp; L Water Solutions</h1>
+    <p>A Ugandan company committed to delivering clean, safe water to every community we serve.</p>
+  </div>
+</section>
+
+<section class="section section-white">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img-col">
+        <div class="about-main-img">
+          <img src="{% static 'images/install.png' %}" alt="D&L installation team at work">
+        </div>
+        <div class="about-badge">
+          <div class="about-badge-num">500+</div>
+          <div class="about-badge-text">Projects Completed Across Uganda</div>
+        </div>
+      </div>
+      <div class="about-text">
+        <span class="section-eyebrow">WHO WE ARE</span>
+        <h2>Improving Lives Through Clean Water</h2>
+        <p>D &amp; L Water Solutions Uganda Limited is a Ugandan-based company specialising in UV water purification technology. We were established with a clear mission: to make safe, clean drinking water accessible to every Ugandan.</p>
+        <p>We understand that access to purified water is not a luxury — it is a basic right. Our UV purification systems combine powerful filtration, UV sterilisation, and reliable stainless steel storage in one complete package.</p>
+        <div class="about-checks">
+          <div class="about-check"><div class="check-mark">✓</div><span>Locally based team with deep knowledge of Uganda's water challenges</span></div>
+          <div class="about-check"><div class="check-mark">✓</div><span>UV purification proven to eliminate 99.9% of harmful pathogens</span></div>
+          <div class="about-check"><div class="check-mark">✓</div><span>Energy-efficient systems running on just 12 watts of electricity</span></div>
+          <div class="about-check"><div class="check-mark">✓</div><span>Serving homes, schools, hospitals, hotels, factories and farms</span></div>
+        </div>
+        <a href="{% url 'contact' %}" class="btn btn-blue">GET IN TOUCH →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Core Values -->
+<section class="section section-navy">
+  <div class="container">
+    <div class="section-header center">
+      <span class="section-eyebrow">OUR CORE VALUES</span>
+      <h2>What Drives Everything We Do</h2>
+      <p>Three principles that guide every product we build, every installation we complete, and every client we serve.</p>
+    </div>
+    <div class="markets-grid" style="grid-template-columns: repeat(3,1fr);">
+      <div class="market-card" style="background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1);">
+        <div class="market-icon">🛡️</div>
+        <h4 style="color:#fff;">Integrity</h4>
+        <p style="color:rgba(255,255,255,0.6);">Honest, transparent and accountable in everything we do — from pricing to product quality.</p>
+      </div>
+      <div class="market-card" style="background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1);">
+        <div class="market-icon">🤝</div>
+        <h4 style="color:#fff;">Customer Centricity</h4>
+        <p style="color:rgba(255,255,255,0.6);">Your clean water needs are at the heart of every decision we make and every product we build.</p>
+      </div>
+      <div class="market-card" style="background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1);">
+        <div class="market-icon">💡</div>
+        <h4 style="color:#fff;">Innovation</h4>
+        <p style="color:rgba(255,255,255,0.6);">Continuously adopting the best available purification technology to serve Uganda better.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats -->
+<div class="stats-strip">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item"><div class="stat-num">10+</div><div class="stat-label">Years of Experience</div></div>
+      <div class="stat-item"><div class="stat-num">500+</div><div class="stat-label">Projects Completed</div></div>
+      <div class="stat-item"><div class="stat-num">200K+</div><div class="stat-label">People Served</div></div>
+      <div class="stat-item"><div class="stat-num">24/7</div><div class="stat-label">Support Available</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- Location -->
+<section class="section section-soft">
+  <div class="container">
+    <div class="section-header center">
+      <span class="section-eyebrow">FIND US</span>
+      <h2>Our Location</h2>
+    </div>
+    <div class="solutions-grid">
+      <div class="solution-card"><div class="solution-body">
+        <div style="font-size:2rem; margin-bottom:.75rem;">📍</div>
+        <h3>Address</h3>
+        <p>Kampala-Jinja High Way, Seeta-Gema Division<br>Marnak Building, next to St. Augustine Catholic Church</p>
+      </div></div>
+      <div class="solution-card"><div class="solution-body">
+        <div style="font-size:2rem; margin-bottom:.75rem;">📞</div>
+        <h3>Phone Numbers</h3>
+        <p>0772 199 660<br>0702 118 000<br>0776 236 534</p>
+      </div></div>
+      <div class="solution-card"><div class="solution-body">
+        <div style="font-size:2rem; margin-bottom:.75rem;">🕐</div>
+        <h3>Working Hours</h3>
+        <p>Monday – Saturday: 8AM – 6PM<br>Sunday: By appointment only</p>
+      </div></div>
+      <div class="solution-card"><div class="solution-body">
+        <div style="font-size:2rem; margin-bottom:.75rem;">💬</div>
+        <h3>WhatsApp</h3>
+        <p>Chat with us directly on WhatsApp for quick enquiries and quotations.</p>
+        <a href="https://wa.me/256772199660" target="_blank" class="btn btn-green" style="font-size:13px; padding:0.55rem 1.1rem; margin-top:0.75rem;">Open WhatsApp</a>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

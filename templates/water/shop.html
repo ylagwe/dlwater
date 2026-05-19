@@ -1,0 +1,380 @@
+{% extends 'water/base.html' %}
+{% load static %}
+{% block title %}Shop — D & L Water Solutions Uganda{% endblock %}
+
+{% block content %}
+
+<section class="page-hero" style="background-image:url('{% static "images/purifier_unit.png" %}'); background-size:cover; background-position:center;">
+  <div class="container">
+    <div class="breadcrumb"><a href="{% url 'home' %}">Home</a> <span>›</span> <span>Shop</span></div>
+    <h1>Shop Our Products</h1>
+    <p>Order filters, tanks, UV chambers and purifier cages — delivered and installed across Uganda.</p>
+  </div>
+</section>
+
+<!-- SHOP BODY -->
+<section class="section section-soft">
+  <div class="container">
+
+    <!-- Category filter tabs -->
+    <div class="shop-cats">
+      <button class="shop-cat-btn active" data-cat="all">All Products</button>
+      <button class="shop-cat-btn" data-cat="filters">💧 Filters</button>
+      <button class="shop-cat-btn" data-cat="tanks">🫙 SS Tanks</button>
+      <button class="shop-cat-btn" data-cat="uv">☀️ UV Chambers</button>
+      <button class="shop-cat-btn" data-cat="cage">🛡️ Purifier Cages</button>
+    </div>
+
+    <!-- PRODUCT GRID -->
+    <div class="shop-grid" id="shopGrid">
+
+      <!-- ── FILTERS ── -->
+      <div class="shop-card" data-cat="filters">
+        <div class="shop-card-img">
+          <img src="{% static 'images/clean_vs_dirty.png' %}" alt="Sediment filter cartridge">
+          <span class="shop-badge">Bestseller</span>
+        </div>
+        <div class="shop-card-body">
+          <div class="shop-card-cat">Filters</div>
+          <h3>Sediment Filter Cartridge</h3>
+          <p>Removes sand, dirt, rust and suspended particles. First line of defence in your purification system.</p>
+          <div class="shop-card-specs">
+            <div class="shop-spec"><span class="shop-spec-label">Size</span><span class="shop-spec-val">10 inch</span></div>
+            <div class="shop-spec"><span class="shop-spec-label">Micron rating</span><span class="shop-spec-val">5 µm</span></div>
+            <div class="shop-spec"><span class="shop-spec-label">Lifespan</span><span class="shop-spec-val">3 – 6 months</span></div>
+          </div>
+          <div class="shop-card-actions">
+            <button class="btn btn-outline-blue" onclick="openEnquiry('Sediment Filter Cartridge')">Enquire</button>
+            <button class="btn btn-blue" onclick="addToCart('Sediment Filter Cartridge','{% static "images/clean_vs_dirty.png" %}','Filters')">Add to Cart 🛒</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="shop-card" data-cat="filters">
+        <div class="shop-card-img">
+          <img src="{% static 'images/clean_vs_dirty.png' %}" alt="Activated carbon filter cartridge">
+          <span class="shop-badge green">Popular</span>
+        </div>
+        <div class="shop-card-body">
+          <div class="shop-card-cat">Filters</div>
+          <h3>Activated Carbon Filter</h3>
+          <p>Eliminates chlorine, odour, colour, and harmful chemicals. Makes water taste and smell clean.</p>
+          <div class="shop-card-specs">
+            <div class="shop-spec"><span class="shop-spec-label">Size</span><span class="shop-spec-val">10 inch</span></div>
+            <div class="shop-spec"><span class="shop-spec-label">Type</span><span class="shop-spec-val">CTO Block Carbon</span></div>
+            <div class="shop-spec"><span class="shop-spec-label">Lifespan</span><span class="shop-spec-val">6 – 12 months</span></div>
+          </div>
+          <div class="shop-card-actions">
+            <button class="btn btn-outline-blue" onclick="openEnquiry('Activated Carbon Filter')">Enquire</button>
+            <button class="btn btn-blue" onclick="addToCart('Activated Carbon Filter','{% static "images/clean_vs_dirty.png" %}','Filters')">Add to Cart 🛒</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="shop-card" data-cat="filters">
+        <div class="shop-card-img">
+          <img src="{% static 'images/filters_installed.png' %}" alt="3-stage filter set">
+        </div>
+        <div class="shop-card-body">
+          <div class="shop-card-cat">Filters</div>
+          <h3>3-Stage Filter Set (Combo)</h3>
+          <p>Complete set: 1× sediment + 2× carbon filters. Best value for a full filter replacement cycle.</p>
+          <div class="shop-card-specs">
+            <div class="shop-spec"><span class="shop-spec-label">Contents</span><span class="shop-spec-val">3 cartridges</span></div>
+            <div class="shop-spec"><span class="shop-spec-label">Compatibility</span><span class="shop-spec-val">All D&amp;L systems</span></div>
+            <div class="shop-spec"><span class="shop-spec-label">Discount</span><span class="shop-spec-val">Combo savings</span></div>
+          </div>
+          <div class="shop-card-actions">
+            <button class="btn btn-outline-blue" onclick="openEnquiry('3-Stage Filter Set Combo')">Enquire</button>
+            <button class="btn btn-blue" onclick="addToCart('3-Stage Filter Set (Combo)','{% static "images/filters_installed.png" %}','Filters')">Add to Cart 🛒</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── STAINLESS STEEL TANKS ── -->
+      <div class="shop-card" data-cat="tanks">
+        <div class="shop-card-img">
+          <img src="{% static 'images/tank.png' %}" alt="300L stainless steel tank">
+          <span class="shop-badge">Home Size</span>
+        </div>
+        <div class="shop-card-body">
+          <div class="shop-card-cat">Stainless Steel Tanks</div>
+          <h3>SS Reservoir Tank — 300 L</h3>
+          <p>Food-grade stainless steel tank for residential homes. Hygienic, rust-proof and long-lasting.</p>
+          <div class="shop-card-specs">
+            <div class="shop-spec"><span class="shop-spec-label">Capacity</span><span class="shop-spec-val">300 litres</span></div>
+            <div class="shop-spec"><span class="shop-spec-label">Material</span><span class="shop-spec-val">Food-grade SS304</span></div>
+            <div class="shop-spec"><span class="shop-spec-label">Brand</span><span class="shop-spec-val">D &amp; L Water</span></div>
+          </div>
+          <div class="shop-card-actions">
+            <button class="btn btn-outline-blue" onclick="openEnquiry('SS Tank 300L')">Enquire</button>
+            <button class="btn btn-blue" onclick="addToCart('SS Tank — 300 L','{% static "images/tank.png" %}','Tanks')">Add to Cart 🛒</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="shop-card" data-cat="tanks">
+        <div class="shop-card-img">
+          <img src="{% static 'images/tank.png' %}" alt="500L stainless steel tank">
+          <span class="shop-badge green">Popular</span>
+        </div>
+        <div class="shop-card-body">
+          <div class="shop-card-cat">Stainless Steel Tanks</div>
+          <h3>SS Reservoir Tank — 500 L</h3>
+          <p>Mid-range capacity for schools, offices and commercial premises requiring consistent water supply.</p>
+          <div class="shop-card-specs">
+            <div class="shop-spec"><span class="shop-spec-label">Capacity</span><span class="shop-spec-val">500 litres</span></div>
+            <div class="shop-spec"><span class="shop-spec-label">Material</span><span class="shop-spec-val">Food-grade SS304</span></div>
+            <div class="shop-spec"><span class="shop-spec-label">Ideal for</span><span class="shop-spec-val">Schools, Offices</span></div>
+          </div>
+          <div class="shop-card-actions">
+            <button class="btn btn-outline-blue" onclick="openEnquiry('SS Tank 500L')">Enquire</button>
+            <button class="btn btn-blue" onclick="addToCart('SS Tank — 500 L','{% static "images/tank.png" %}','Tanks')">Add to Cart 🛒</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="shop-card" data-cat="tanks">
+        <div class="shop-card-img">
+          <img src="{% static 'images/tank.png' %}" alt="1000L stainless steel tank">
+          <span class="shop-badge">Industrial</span>
+        </div>
+        <div class="shop-card-body">
+          <div class="shop-card-cat">Stainless Steel Tanks</div>
+          <h3>SS Reservoir Tank — 1,000 L</h3>
+          <p>Maximum capacity tank for hospitals, hotels, factories and large community water points.</p>
+          <div class="shop-card-specs">
+            <div class="shop-spec"><span class="shop-spec-label">Capacity</span><span class="shop-spec-val">1,000 litres</span></div>
+            <div class="shop-spec"><span class="shop-spec-label">Material</span><span class="shop-spec-val">Food-grade SS304</span></div>
+            <div class="shop-spec"><span class="shop-spec-label">Ideal for</span><span class="shop-spec-val">Hospitals, Hotels</span></div>
+          </div>
+          <div class="shop-card-actions">
+            <button class="btn btn-outline-blue" onclick="openEnquiry('SS Tank 1000L')">Enquire</button>
+            <button class="btn btn-blue" onclick="addToCart('SS Tank — 1,000 L','{% static "images/tank.png" %}','Tanks')">Add to Cart 🛒</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── UV CHAMBERS ── -->
+      <div class="shop-card" data-cat="uv">
+        <div class="shop-card-img">
+          <img src="{% static 'images/purifier_unit.png' %}" alt="UV chamber steriliser">
+          <span class="shop-badge">Core Component</span>
+        </div>
+        <div class="shop-card-body">
+          <div class="shop-card-cat">UV Chambers</div>
+          <h3>UV Chamber — Standard (120–440 L/hr)</h3>
+          <p>Deactivates 99.9% of bacteria, viruses and pathogens. Suitable for residential and light commercial use.</p>
+          <div class="shop-card-specs">
+            <div class="shop-spec"><span class="shop-spec-label">Flow rate</span><span class="shop-spec-val">120 – 440 L/hr</span></div>
+            <div class="shop-spec"><span class="shop-spec-label">Power</span><span class="shop-spec-val">12 W</span></div>
+            <div class="shop-spec"><span class="shop-spec-label">Lamp life</span><span class="shop-spec-val">9,000 hrs</span></div>
+          </div>
+          <div class="shop-card-actions">
+            <button class="btn btn-outline-blue" onclick="openEnquiry('UV Chamber Standard')">Enquire</button>
+            <button class="btn btn-blue" onclick="addToCart('UV Chamber — Standard','{% static "images/purifier_unit.png" %}','UV Chambers')">Add to Cart 🛒</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="shop-card" data-cat="uv">
+        <div class="shop-card-img">
+          <img src="{% static 'images/filters_installed.png' %}" alt="UV chamber high flow">
+          <span class="shop-badge green">Commercial</span>
+        </div>
+        <div class="shop-card-body">
+          <div class="shop-card-cat">UV Chambers</div>
+          <h3>UV Chamber — High Flow (600–1,800 L/hr)</h3>
+          <p>High-output UV steriliser for commercial and industrial installations requiring large volume treatment.</p>
+          <div class="shop-card-specs">
+            <div class="shop-spec"><span class="shop-spec-label">Flow rate</span><span class="shop-spec-val">600 – 1,800 L/hr</span></div>
+            <div class="shop-spec"><span class="shop-spec-label">Power</span><span class="shop-spec-val">12 W</span></div>
+            <div class="shop-spec"><span class="shop-spec-label">Lamp life</span><span class="shop-spec-val">9,000 hrs</span></div>
+          </div>
+          <div class="shop-card-actions">
+            <button class="btn btn-outline-blue" onclick="openEnquiry('UV Chamber High Flow')">Enquire</button>
+            <button class="btn btn-blue" onclick="addToCart('UV Chamber — High Flow','{% static "images/filters_installed.png" %}','UV Chambers')">Add to Cart 🛒</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── PURIFIER CAGES ── -->
+      <div class="shop-card" data-cat="cage">
+        <div class="shop-card-img">
+          <img src="{% static 'images/purifier_unit.png' %}" alt="Water purifier protective cage">
+          <span class="shop-badge">Protective</span>
+        </div>
+        <div class="shop-card-body">
+          <div class="shop-card-cat">Purifier Cages</div>
+          <h3>Water Purifier Cage — Standard</h3>
+          <p>Powder-coated steel cage to protect filters, UV chamber and connections from damage and tampering.</p>
+          <div class="shop-card-specs">
+            <div class="shop-spec"><span class="shop-spec-label">Material</span><span class="shop-spec-val">Powder-coated steel</span></div>
+            <div class="shop-spec"><span class="shop-spec-label">Fits</span><span class="shop-spec-val">2–3 filter housings</span></div>
+            <div class="shop-spec"><span class="shop-spec-label">Mounting</span><span class="shop-spec-val">Wall bracket included</span></div>
+          </div>
+          <div class="shop-card-actions">
+            <button class="btn btn-outline-blue" onclick="openEnquiry('Purifier Cage Standard')">Enquire</button>
+            <button class="btn btn-blue" onclick="addToCart('Purifier Cage — Standard','{% static "images/purifier_unit.png" %}','Cages')">Add to Cart 🛒</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="shop-card" data-cat="cage">
+        <div class="shop-card-img">
+          <img src="{% static 'images/filters_installed.png' %}" alt="Heavy duty purifier cage">
+          <span class="shop-badge green">Heavy Duty</span>
+        </div>
+        <div class="shop-card-body">
+          <div class="shop-card-cat">Purifier Cages</div>
+          <h3>Purifier Cage — Heavy Duty</h3>
+          <p>Reinforced steel cage for industrial and outdoor installations. Lockable door for added security.</p>
+          <div class="shop-card-specs">
+            <div class="shop-spec"><span class="shop-spec-label">Material</span><span class="shop-spec-val">Galvanised steel</span></div>
+            <div class="shop-spec"><span class="shop-spec-label">Lock</span><span class="shop-spec-val">Padlock-ready</span></div>
+            <div class="shop-spec"><span class="shop-spec-label">Fits</span><span class="shop-spec-val">Up to 5 housings</span></div>
+          </div>
+          <div class="shop-card-actions">
+            <button class="btn btn-outline-blue" onclick="openEnquiry('Purifier Cage Heavy Duty')">Enquire</button>
+            <button class="btn btn-blue" onclick="addToCart('Purifier Cage — Heavy Duty','{% static "images/filters_installed.png" %}','Cages')">Add to Cart 🛒</button>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /shop-grid -->
+  </div>
+</section>
+
+<!-- ── CART DRAWER ── -->
+<div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-drawer-head">
+    <h3>🛒 Your Cart</h3>
+    <button class="cart-close" onclick="toggleCart()">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <div class="cart-empty">Your cart is empty.<br>Add products to get started.</div>
+  </div>
+  <div class="cart-footer">
+    <div class="cart-total"><span>Total</span><span id="cartTotal">UGX 0</span></div>
+    <p class="cart-note">Prices are quoted on request. Click "Submit Enquiry" and our team will contact you with final pricing and delivery details.</p>
+    <button class="btn btn-blue" style="width:100%; justify-content:center;" onclick="submitCartEnquiry()">Submit Enquiry via WhatsApp →</button>
+  </div>
+</div>
+
+<!-- Cart FAB -->
+<div class="cart-fab" onclick="toggleCart()" id="cartFab" style="display:none;">
+  <span style="font-size:20px;">🛒</span>
+  <div class="cart-fab-count" id="cartCount">0</div>
+  <span>Cart</span>
+</div>
+
+<!-- Enquiry modal -->
+<div id="enquiryModal" style="display:none; position:fixed; inset:0; background:rgba(10,22,40,0.5); z-index:600; align-items:center; justify-content:center;">
+  <div style="background:#fff; border-radius:var(--radius-lg); padding:2rem; width:90%; max-width:480px; box-shadow:var(--shadow-lg);">
+    <h3 style="font-family:var(--font-display); font-size:1.1rem; color:var(--navy); margin-bottom:0.25rem;">Product Enquiry</h3>
+    <p id="enquiryProduct" style="font-size:13px; color:var(--blue); font-weight:600; margin-bottom:1.25rem;"></p>
+    <form id="enquiryForm" method="post" action="{% url 'contact' %}">
+      {% csrf_token %}
+      <input type="hidden" name="subject" id="enquirySubjectField">
+      <div style="margin-bottom:1rem;">
+        <label style="display:block; font-size:13px; font-weight:600; margin-bottom:4px;">Your Name *</label>
+        <input type="text" name="name" required style="width:100%; padding:.65rem 1rem; border:1.5px solid var(--border); border-radius:var(--radius); font-family:var(--font); font-size:14px;">
+      </div>
+      <div style="margin-bottom:1rem;">
+        <label style="display:block; font-size:13px; font-weight:600; margin-bottom:4px;">Phone / WhatsApp *</label>
+        <input type="tel" name="phone" required style="width:100%; padding:.65rem 1rem; border:1.5px solid var(--border); border-radius:var(--radius); font-family:var(--font); font-size:14px;" placeholder="e.g. 0772 199 660">
+      </div>
+      <div style="margin-bottom:1rem;">
+        <label style="display:block; font-size:13px; font-weight:600; margin-bottom:4px;">Email</label>
+        <input type="email" name="email" style="width:100%; padding:.65rem 1rem; border:1.5px solid var(--border); border-radius:var(--radius); font-family:var(--font); font-size:14px;">
+      </div>
+      <div style="margin-bottom:1.5rem;">
+        <label style="display:block; font-size:13px; font-weight:600; margin-bottom:4px;">Message / Quantity needed</label>
+        <textarea name="message" rows="3" style="width:100%; padding:.65rem 1rem; border:1.5px solid var(--border); border-radius:var(--radius); font-family:var(--font); font-size:14px; resize:vertical;" placeholder="How many units do you need? Any other details?"></textarea>
+      </div>
+      <div style="display:flex; gap:.75rem;">
+        <button type="button" onclick="closeEnquiry()" style="flex:1;" class="btn btn-outline-blue">Cancel</button>
+        <button type="submit" style="flex:1; justify-content:center;" class="btn btn-blue">Send Enquiry →</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+  // ── Category filter ──
+  document.querySelectorAll('.shop-cat-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.shop-cat-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const cat = btn.dataset.cat;
+      document.querySelectorAll('.shop-card').forEach(card => {
+        card.style.display = (cat === 'all' || card.dataset.cat === cat) ? '' : 'none';
+      });
+    });
+  });
+
+  // ── Cart ──
+  let cart = [];
+
+  function addToCart(name, img, cat) {
+    const existing = cart.find(i => i.name === name);
+    if (existing) { existing.qty++; } else { cart.push({ name, img, cat, qty: 1 }); }
+    renderCart();
+    toggleCart(true);
+  }
+
+  function renderCart() {
+    const el = document.getElementById('cartItems');
+    const fab = document.getElementById('cartFab');
+    const count = cart.reduce((s, i) => s + i.qty, 0);
+    document.getElementById('cartCount').textContent = count;
+    fab.style.display = count > 0 ? 'flex' : 'none';
+    if (cart.length === 0) { el.innerHTML = '<div class="cart-empty">Your cart is empty.<br>Add products to get started.</div>'; document.getElementById('cartTotal').textContent = 'UGX 0'; return; }
+    el.innerHTML = cart.map((item, i) => `
+      <div class="cart-item">
+        <img class="cart-item-img" src="${item.img}" alt="${item.name}">
+        <div class="cart-item-info">
+          <div class="cart-item-name">${item.name}</div>
+          <div class="cart-item-sub">${item.cat}</div>
+          <div class="cart-item-qty">
+            <button class="qty-btn" onclick="changeQty(${i},-1)">−</button>
+            <span class="qty-num">${item.qty}</span>
+            <button class="qty-btn" onclick="changeQty(${i},1)">+</button>
+          </div>
+        </div>
+        <button class="cart-item-remove" onclick="removeItem(${i})" title="Remove">✕</button>
+      </div>`).join('');
+    document.getElementById('cartTotal').textContent = `${count} item${count !== 1 ? 's' : ''} — price on enquiry`;
+  }
+
+  function changeQty(i, d) { cart[i].qty += d; if (cart[i].qty <= 0) cart.splice(i, 1); renderCart(); }
+  function removeItem(i) { cart.splice(i, 1); renderCart(); }
+
+  function toggleCart(forceOpen) {
+    const drawer = document.getElementById('cartDrawer');
+    const overlay = document.getElementById('cartOverlay');
+    const open = forceOpen || !drawer.classList.contains('open');
+    drawer.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+  }
+
+  function submitCartEnquiry() {
+    if (cart.length === 0) { alert('Your cart is empty.'); return; }
+    const lines = cart.map(i => `• ${i.name} × ${i.qty}`).join('\n');
+    const msg = encodeURIComponent(`Hello D & L Water Solutions! I'd like to enquire about the following products:\n\n${lines}\n\nPlease send me pricing and availability. Thank you.`);
+    window.open(`https://wa.me/256772199660?text=${msg}`, '_blank');
+  }
+
+  // ── Enquiry modal ──
+  function openEnquiry(product) {
+    document.getElementById('enquiryProduct').textContent = 'Product: ' + product;
+    document.getElementById('enquirySubjectField').value = 'Product Enquiry — ' + product;
+    document.getElementById('enquiryModal').style.display = 'flex';
+  }
+  function closeEnquiry() { document.getElementById('enquiryModal').style.display = 'none'; }
+</script>
+{% endblock %}

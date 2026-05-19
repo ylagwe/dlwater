@@ -1,0 +1,111 @@
+{% extends 'water/base.html' %}
+{% load static %}
+{% block title %}Products — D & L Water Solutions Uganda{% endblock %}
+{% block content %}
+
+<section class="page-hero" style="background-image: url('{% static "images/install.png" %}'); background-size:cover; background-position:center;">
+  <div class="container">
+    <div class="breadcrumb"><a href="{% url 'home' %}">Home</a> <span>›</span> <span>Products</span></div>
+    <h1>Our UV Water Purifiers</h1>
+    <p>Professional-grade purification systems for every scale — from family homes to large institutions.</p>
+  </div>
+</section>
+
+<section class="section section-soft">
+  <div class="container">
+    <div class="section-header center">
+      <span class="section-eyebrow">PRODUCT RANGE</span>
+      <h2>Choose Your Purification System</h2>
+      <p>All systems include water filters, UV chamber, stainless steel tank, and purifier cage.</p>
+    </div>
+    <div class="solutions-grid">
+
+      <div class="solution-card">
+        <div class="solution-img"><img src="{% static 'images/purifier_unit.png' %}" alt="Home UV purifier"></div>
+        <div class="solution-body">
+          <div class="solution-tag">Residential</div>
+          <h3>Home Series</h3>
+          <p>120 L/hr · 300 L tank · 12W · Ideal for homes &amp; apartments.</p>
+          <a href="{% url 'contact' %}" class="btn btn-blue" style="font-size:13px; padding:0.55rem 1.1rem; margin-top:0.5rem;">Get a Quote</a>
+        </div>
+      </div>
+
+      <div class="solution-card" style="border: 2px solid var(--blue); box-shadow: 0 0 0 4px rgba(26,111,181,0.08);">
+        <div class="solution-img" style="position:relative;">
+          <img src="{% static 'images/filters_installed.png' %}" alt="Commercial filter system">
+          <span style="position:absolute; top:10px; right:10px; background:var(--blue); color:#fff; font-size:11px; font-weight:700; padding:4px 10px; border-radius:100px;">MOST POPULAR</span>
+        </div>
+        <div class="solution-body">
+          <div class="solution-tag">Commercial</div>
+          <h3>Commercial Series</h3>
+          <p>440–600 L/hr · 400–600 L tank · 12W · Schools, hotels, hospitals.</p>
+          <a href="{% url 'contact' %}" class="btn btn-blue" style="font-size:13px; padding:0.55rem 1.1rem; margin-top:0.5rem;">Get a Quote</a>
+        </div>
+      </div>
+
+      <div class="solution-card">
+        <div class="solution-img"><img src="{% static 'images/install.png' %}" alt="Industrial installation"></div>
+        <div class="solution-body">
+          <div class="solution-tag">Industrial</div>
+          <h3>Industrial Series</h3>
+          <p>1,800 L/hr · 1,000 L tank · 12W · Factories, farms, large sites.</p>
+          <a href="{% url 'contact' %}" class="btn btn-blue" style="font-size:13px; padding:0.55rem 1.1rem; margin-top:0.5rem;">Get a Quote</a>
+        </div>
+      </div>
+
+      <div class="solution-card">
+        <div class="solution-img"><img src="{% static 'images/tank.png' %}" alt="Community tank"></div>
+        <div class="solution-body">
+          <div class="solution-tag">Community</div>
+          <h3>Community Series</h3>
+          <p>Large stainless steel reservoirs for public water points and communities.</p>
+          <a href="{% url 'contact' %}" class="btn btn-blue" style="font-size:13px; padding:0.55rem 1.1rem; margin-top:0.5rem;">Get a Quote</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- What's included -->
+<section class="section section-white">
+  <div class="container">
+    <div class="section-header center">
+      <span class="section-eyebrow">STANDARD INCLUSIONS</span>
+      <h2>Every System Comes With</h2>
+    </div>
+    <div class="solutions-grid">
+      <div class="solution-card"><div class="solution-body">
+        <div style="font-size:2rem; margin-bottom:0.75rem;">🔵</div>
+        <h3>Sediment Filter</h3>
+        <p>Removes dirt, sand, rust and large particles before water reaches the UV stage.</p>
+      </div></div>
+      <div class="solution-card"><div class="solution-body">
+        <div style="font-size:2rem; margin-bottom:0.75rem;">⚫</div>
+        <h3>Activated Carbon Filter</h3>
+        <p>Removes odour, colour, chlorine and harmful organic compounds from water.</p>
+      </div></div>
+      <div class="solution-card"><div class="solution-body">
+        <div style="font-size:2rem; margin-bottom:0.75rem;">☀️</div>
+        <h3>UV Chamber</h3>
+        <p>Deactivates 99.9% of micro-organisms, pathogens, germs and viruses.</p>
+      </div></div>
+      <div class="solution-card"><div class="solution-body">
+        <div style="font-size:2rem; margin-bottom:0.75rem;">🫙</div>
+        <h3>SS Reservoir Tank</h3>
+        <p>Durable stainless steel storage tank keeps purified water fresh and ready.</p>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <h2>Not Sure Which System You Need?</h2>
+    <p>Our team will help you find the right purification solution for your specific needs and budget.</p>
+    <div class="cta-actions">
+      <a href="{% url 'contact' %}" class="btn btn-white">TALK TO US TODAY</a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,100 @@
+{% extends 'water/base.html' %}
+{% load static %}
+{% block title %}Contact Us — D & L Water Solutions Uganda{% endblock %}
+{% block content %}
+
+<section class="page-hero" style="background-image:url('{% static "images/purifier_unit.png" %}'); background-size:cover; background-position:center;">
+  <div class="container">
+    <div class="breadcrumb"><a href="{% url 'home' %}">Home</a> <span>›</span> <span>Contact</span></div>
+    <h1>Get in Touch</h1>
+    <p>Ready for safe drinking water? Our team is happy to help you find the right solution.</p>
+  </div>
+</section>
+
+<section class="section section-soft">
+  <div class="container">
+    <div style="display:grid; grid-template-columns:1fr 1.5fr; gap:4rem; align-items:start;">
+
+      <!-- Info -->
+      <div>
+        <span class="section-eyebrow">CONTACT D &amp; L WATER SOLUTIONS</span>
+        <h2 style="font-family:var(--font-display); font-size:1.8rem; font-weight:800; color:var(--navy); margin:0.5rem 0 1rem;">We're Here to Help</h2>
+        <p style="color:var(--text-muted); margin-bottom:2rem; line-height:1.8;">Whether you need a quote for a home purifier or a large-scale installation, reach out and we will get back to you promptly.</p>
+
+        <div style="display:flex; flex-direction:column; gap:1.25rem;">
+          <div style="display:flex; gap:0.85rem; align-items:flex-start;">
+            <div style="width:44px; height:44px; background:var(--blue-pale); border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:20px; flex-shrink:0;">📍</div>
+            <div>
+              <div style="font-size:11px; color:var(--text-light); text-transform:uppercase; letter-spacing:.08em; margin-bottom:3px;">Address</div>
+              <div style="font-size:14px; font-weight:600; color:var(--navy);">Kampala-Jinja High Way, Seeta-Gema Division</div>
+              <div style="font-size:13px; color:var(--text-muted);">Marnak Building, next to St. Augustine Catholic Church</div>
+            </div>
+          </div>
+          <div style="display:flex; gap:0.85rem; align-items:flex-start;">
+            <div style="width:44px; height:44px; background:var(--blue-pale); border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:20px; flex-shrink:0;">📞</div>
+            <div>
+              <div style="font-size:11px; color:var(--text-light); text-transform:uppercase; letter-spacing:.08em; margin-bottom:3px;">Phone Numbers</div>
+              <div style="font-size:14px; font-weight:600; color:var(--navy);">0772 199 660</div>
+              <div style="font-size:14px; font-weight:600; color:var(--navy);">0702 118 000</div>
+              <div style="font-size:14px; font-weight:600; color:var(--navy);">0776 236 534</div>
+            </div>
+          </div>
+          <div style="display:flex; gap:0.85rem; align-items:flex-start;">
+            <div style="width:44px; height:44px; background:var(--blue-pale); border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:20px; flex-shrink:0;">🕐</div>
+            <div>
+              <div style="font-size:11px; color:var(--text-light); text-transform:uppercase; letter-spacing:.08em; margin-bottom:3px;">Working Hours</div>
+              <div style="font-size:14px; font-weight:600; color:var(--navy);">Mon – Sat: 8:00 AM – 6:00 PM</div>
+              <div style="font-size:13px; color:var(--text-muted);">Sunday: By appointment only</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:2rem; background:var(--blue-pale); border-radius:var(--radius-lg); padding:1.25rem;">
+          <div style="font-size:13px; font-weight:600; color:var(--blue); margin-bottom:0.4rem;">💧 Why Choose D &amp; L?</div>
+          <div style="font-size:12.5px; color:var(--text-muted);">Kill Germs · Save Money · Save Time · Protect the Environment</div>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div style="background:#fff; border:1px solid var(--border); border-radius:var(--radius-lg); padding:2.5rem; box-shadow:var(--shadow);">
+        <h3 style="font-family:var(--font-display); font-size:1.2rem; font-weight:700; color:var(--navy); margin-bottom:1.75rem;">Send Us a Message</h3>
+        <form method="post" novalidate>
+          {% csrf_token %}
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1.1rem;">
+            <div>
+              <label style="display:block; font-size:13px; font-weight:600; color:var(--text); margin-bottom:0.4rem;">Full Name *</label>
+              <input type="text" name="name" placeholder="Your full name" required style="width:100%; padding:0.7rem 1rem; border:1.5px solid var(--border); border-radius:var(--radius); font-family:var(--font); font-size:14px; color:var(--text); outline:none; transition:border-color .2s;">
+            </div>
+            <div>
+              <label style="display:block; font-size:13px; font-weight:600; color:var(--text); margin-bottom:0.4rem;">Phone Number</label>
+              <input type="tel" name="phone" placeholder="e.g. 0772 123 456" style="width:100%; padding:0.7rem 1rem; border:1.5px solid var(--border); border-radius:var(--radius); font-family:var(--font); font-size:14px; color:var(--text); outline:none;">
+            </div>
+          </div>
+          <div style="margin-bottom:1.1rem;">
+            <label style="display:block; font-size:13px; font-weight:600; color:var(--text); margin-bottom:0.4rem;">Email Address *</label>
+            <input type="email" name="email" placeholder="your@email.com" required style="width:100%; padding:0.7rem 1rem; border:1.5px solid var(--border); border-radius:var(--radius); font-family:var(--font); font-size:14px; color:var(--text); outline:none;">
+          </div>
+          <div style="margin-bottom:1.1rem;">
+            <label style="display:block; font-size:13px; font-weight:600; color:var(--text); margin-bottom:0.4rem;">What are you interested in? *</label>
+            <select name="subject" required style="width:100%; padding:0.7rem 1rem; border:1.5px solid var(--border); border-radius:var(--radius); font-family:var(--font); font-size:14px; color:var(--text); outline:none; background:#fff;">
+              <option value="">Select a topic...</option>
+              <option>Home purifier quote</option>
+              <option>Commercial / School purifier</option>
+              <option>Hospital / Clinic system</option>
+              <option>Industrial / Factory system</option>
+              <option>General enquiry</option>
+              <option>After-sales support</option>
+            </select>
+          </div>
+          <div style="margin-bottom:1.5rem;">
+            <label style="display:block; font-size:13px; font-weight:600; color:var(--text); margin-bottom:0.4rem;">Message *</label>
+            <textarea name="message" rows="5" placeholder="Tell us about your water needs, location, and preferred capacity..." required style="width:100%; padding:0.7rem 1rem; border:1.5px solid var(--border); border-radius:var(--radius); font-family:var(--font); font-size:14px; color:var(--text); outline:none; resize:vertical;"></textarea>
+          </div>
+          <button type="submit" class="btn btn-blue" style="width:100%; justify-content:center; font-size:14.5px; padding:0.85rem;">SEND MESSAGE →</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
